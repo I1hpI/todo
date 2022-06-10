@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: #c7c3bb;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+header {
+  font-size: 1rem;
+  color: #077fe0;
+  text-decoration: underline;
+}
+
+header,
+.form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  background: white;
+  position: absolute;
+  width: 30rem;
+  border-radius :3px;
+ 
+
+  
+  
+}
+.form button {
+  padding: 0.5rem;
+  font-size: 0.6rem;
+  border: 0.4px ;
+  border-radius: 8px;
+  background: white;
+}
+.form button {
+  color: white;
+  background: #077fe0;
+  cursor: pointer;
+  position: relative;
+  left: 13rem;
+  width:5em;
+  transition: all 0.3s ease;
+}
+/* .form button:hover {
+  background: #ff6f47;
+  color: white;
+} */
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 100%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.8rem;
+  background: white;
+  font-size: 1rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  transition: all 1s ease;
+  cursor:pointer;
+  
+
+}
+.todo .edit{
+  visibility: hidden;
+}
+.todo .trash-btn{
+  visibility: hidden;
+}
+.todo:hover .edit{
+  visibility: visible;
+}
+.todo:hover .trash-btn{
+  visibility: visible;
+}
+.todo li {
+  flex: 1;
+}
+.todo .date{
+  visibility: hidden;
+}
+.todo:hover .date{
+  visibility: visible;
+}
+
+.trash-btn,
+.edit,
+.complete-btn {
+  background: white ;
+  color: #0077ff;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.complete-btn {
+
+  background: rgb(11, 212, 162);
+}
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.chckbox {
+  initial-value: true;
+  opacity: 0.5;
+}
+
+/*CUSTOM SELECTOR */
+.filter {
+  min-height: 20vh;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-right: 0.5em;
+ 
+
+
+}
+select {
+  border-radius: 5px;
+  width: 10%;
+}
+select:hover {
+  border-color: #0077ff;
+}
+hr{
+  border-radius : 2;
+  shadow : 3;
+  opacity :  0.3;
+  display: flex;
+  justify-content: center;
+
+ }
+div.addedtext{
+ padding-right:15em ;
+}
+.app{
+ border:0%;
+}
+
+
+
+ /* .hide {
+  display: none;
+}
+
+.myDIV:hover + .hide {
+  display: block;
+  color: red;
+} */
+/* .trash-btn:hover{
+  display: ;
+} */
+/* Custom Select */
+
+/* Transition */
+/*
+.select:hover::after {
+  transform: scale(1.5);
+}
+*/
