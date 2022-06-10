@@ -37,9 +37,13 @@ function App() {
   };
 
   const saveLocalTodos = () => {
-    if(!todos.length) return;
-    localStorage.setItem("todos", JSON.stringify(todos));
+    if(!todos.length) {
+      window.localStorage.clear();
+    }else{
+      localStorage.setItem("todos", JSON.stringify(todos));
+    }
   };
+ 
   
   const getLocalTodos = () => {
     if (localStorage.getItem("todos") === null) {
