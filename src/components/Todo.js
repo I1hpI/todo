@@ -1,6 +1,7 @@
 import React from "react";
 import Delete from "./Delete.png";
 import edit from "./edit.png";
+import info from "./info.png";
 
 const Todo = ({
   text,
@@ -48,11 +49,11 @@ const Todo = ({
        
        
       </li>
-      <input type="checkbox"defaultChecked={todo.completed} style={{ height: 30, width: 30 }} onClick={completeHandler} className="complete-btn">
+      <input type="checkbox" defaultChecked={todo.completed} style={{ height: 30, width: 30 }} onClick={completeHandler} className="complete-btn">
         {/* <img alt="" src={Delete} style={{ height: 30, width: 30 }} /> */}
       </input>
       {todo.id === todoEditing ? (
-        <input type="text" onChange={(e) => setEditingText(e.target.value)} />
+        <input type="text" defaultValue={todo.text} onChange={(e) => setEditingText(e.target.value)} />
       ) : (
         <div className={`addedtext ${todo.completed ? "completed" : ""}`}>{todo.text}</div>
       )}
@@ -70,6 +71,7 @@ const Todo = ({
       <button onClick={deleteHandler} className="trash-btn">
         <img alt="" src={Delete} style={{ height: 15, width: 15 }} />
       </button>
+      <img className="info pa1"alt="" src={info} style={{ height: 23, width: 23 }} />
       <span className="date cursor f7">{date}</span>
     </div>
   );
